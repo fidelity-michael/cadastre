@@ -3,11 +3,6 @@
 #
 # -> As first argument the directory of the geojson files that
 #    need to be parsed
-# -> As second argument the destination directory that the .txt files that'll
-#    be created from the data of the geojson files (from the first arg)
-#
-# ---> Note
-# The directories should already exist, otherwise this program won't work
 #
 ###################
 
@@ -36,7 +31,6 @@ for filename in os.listdir(directory):
             coordinates = data["features"][0]["geometry"]["coordinates"][0]
 
             filename = filename.replace(".geojson", "")
-
 
             # Convert the coordinates from WGS84 to EGSA87
             counter = 0
